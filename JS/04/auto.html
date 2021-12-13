@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Auto-Objecten</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Auto-Objecten</h1>
+    <p id="tekst"></p>
+    <p id="tekst2"></p>
+    <p id="opdracht"></p>
+    <div id="gas"></div>
+    <button onclick="toeteren()">Toeter</button>
+    <button onclick="gasgeven()">Geef gas</button>
+<script>
+    var kartonnendoos = {
+        merk: "Samsung",
+        type: "CS-21Z57ML",
+        lengte: "660 mm",
+        breedte: "402 mm",
+        hoogte: "536 mm",
+        aantalwielen: 0,
+        kleur: "Zwart",
+        snelheid: 0,
+        max: 100
+    }
+    var random=0;
+    function toeteren(){
+        document.getElementById("tekst2").innerHTML="";
+        random=Math.floor(Math.random()*5);
+        document.getElementById("tekst").innerHTML="Zonder dat je het zag reedt iemand zo maar langs je";
+        if(random<=1){
+            document.getElementById("opdracht").style.color="black";
+            document.getElementById("opdracht").innerHTML="U toeterd boos";
+            kartonnendoos.snelheid -= 5;
+
+        }else if(random>=3){
+            document.getElementById("opdracht").style.color="black";
+            document.getElementById("opdracht").innerHTML="U toeterd "+ random*2 +" keer";
+            kartonnendoos.snelheid -= 5;
+        }else{
+            document.getElementById("opdracht").style.color="black";
+            document.getElementById("opdracht").innerHTML="U toeterd voor "+ random +" seconden";
+            kartonnendoos.snelheid -= 5;
+        }
+        random=0;
+    }
+    function gasgeven(){
+        document.getElementById("tekst").innerHTML="Je start de auto";
+        random=Math.floor(Math.random()*20);
+        if(random<1){
+            document.getElementById("opdracht").innerHTML="de auto stopt opeens met gas geven";
+            kartonnendoos.snelheid -= 30;
+
+        }
+        else{
+            if(kartonnendoos.snelheid>=120){
+                document.getElementById("opdracht").style.color="red";
+            }else{
+                document.getElementById("opdracht").style.color="black";
+            }
+            document.getElementById("tekst2").innerHTML="Je geeft gas";
+            kartonnendoos.snelheid += 5;
+            document.getElementById("opdracht").innerHTML="U gaat nu: "+kartonnendoos.snelheid+" km per uur"
+            }
+        }
+        random=0;
+</script>
+    <div style="left:0px;bottom:10px;position:absolute;">
+        <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html"><p>&larr; Terug gaan</p></a>
+    </div>
+</body></html>

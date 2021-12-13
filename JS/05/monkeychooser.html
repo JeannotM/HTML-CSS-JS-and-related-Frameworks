@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Monkey Chooser</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align:center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        div.apenplaatje{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            width:300px;
+            height:450px;
+            border:1px solid black;
+            background-color:blue;
+            float:left;
+        }
+        div.favoriet{
+            width:300px;
+            height:150px;
+            background-color:blue;
+            background-image:none;
+            background-repeat:no-repeat;
+            background-position:center;
+        }
+        div#pics{
+            height:1350px;
+            width:902px;
+            margin:auto;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monkey-Chooser</h1>
+    <div id="pics"></div>
+<script>
+    apen=document.getElementById("pics");
+    PicsHolder()
+    maakapen()
+    
+function PicsHolder(){
+    for(var i=0;i<9;i++) {
+        newdiv=document.createElement("div");
+        newdiv.className="apenplaatje";
+        newdiv.id="picture-holder" + i;
+        apen.appendChild(newdiv)
+    }
+}
+function maakapen(){
+    newdiv=document.getElementsByClassName("apenplaatje");
+    for(var a=0;a<newdiv.length;a++){
+        favoriet=document.createElement("div");
+        favoriet.className="favoriet";
+        favoriet.id="favoriet_"+(a+1);
+        aapplaatje=document.createElement("img");
+        aapplaatje.src="../img/aap"+(a+1)+".jpg";
+        aapplaatje.id=(a+1);
+        aapplaatje.addEventListener("click", function(){
+            maakFavoriet(this.id);
+        });
+        newdiv[a].appendChild(favoriet);
+        newdiv[a].appendChild(aapplaatje);
+    }
+}
+function maakFavoriet(id){
+    favoriet=document.getElementById("favoriet_"+id);
+    notsofavoriet=document.getElementsByClassName("favoriet");
+    for(var b=0;b<notsofavoriet.length;b++){
+        notsofavoriet[b].style.backgroundColor="blue";
+    }
+    favoriet.style.backgroundColor="black"
+}
+</script>
+<div style="left:0px;top:10px;position:absolute;">
+    <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html#school-projects"><p>&larr; Terug gaan</p></a>
+</div>
+</body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eigen handicap</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <fieldset class="form-group">
+                <legend>Banknummer & cijfertjes op de achterkant</legend>
+                <label class="form-control-label mb-1 mt-3" for="bankpas">Banknummer</label>
+                <input class="form-control" type="text" id="bankpas" placeholder="Banknummer">
+                <label class="form-control-label mb-1 mt-3" for="bsn">BSN</label>
+                <input class="form-control" type="text" id="bsn" placeholder="BSN">
+                <label class="form-control-label mb-1 mt-3" for="cijfers">Cijfers van de bankpas</label>
+                <input class="form-control" type="text" id="cijfers" placeholder="De cijfers van de bankpas">
+                <select class="form-contorl mb-1 mt-1" id="bankkeuze">
+                    <option value="ing">ING</option>
+                    <option value="sns">SNS</option>
+                    <option value="pay">Paypal</option>
+                </select>
+                <div class="form-group mt-2">
+                    <h6>Heeft u een hoge of lage risico zorgverzekering</h6>
+                    <label>
+                        <input type="radio" name="risico" value="hoog">Hoge risico
+                    </label>
+                    <label>
+                        <input type="radio" name="risico" value="lage">Lage risico
+                    </label>
+                    <h6>Heeft u meer of minder dan 10.000 euro te besteden</h6>
+                    <label>
+                        <input type="radio" name="geld" value="onder">Meer dan 10.000
+                    </label>
+                    <label>
+                        <input type="radio" name="geld" value="boven">Minder dan 10.000
+                    </label>
+                </div>
+                <small class="form-text text-muted">We zullen dit alleen delen met derde partijen</small>
+                <input class="btn btn-primary mt-2" type="submit" value="send">
+            </fieldset>
+        </form>
+    </div>
+    <div style="left:0px;bottom:10px;position:absolute;">
+        <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../index.html"><p>&larr; Terug gaan</p></a>
+    </div>
+</body>
+</html>

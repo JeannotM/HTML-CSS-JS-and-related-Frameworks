@@ -1,0 +1,54 @@
+body {
+	font-familt:"Arial", "sans-serif";
+}
+nav {
+	background-color: black;
+	padding:10px;
+}
+nav a {
+	color: white;
+	padding:10px;
+	font-weight:bold;
+	text-decoration:none;
+	padding-right:12px;
+	border-right:2px solid white;
+}
+article {
+	float:left;
+	width:48%;
+	margin-right:2%;
+	margin-top:2%;
+}
+table {
+	float:right;
+	width:48%;
+	border-collapse:collapse;
+	border:1px solid black;
+	margin-left:2%;
+	margin-top:2%;
+}
+td {
+	padding:10px;
+	border:1px solid black;
+}
+td.groen {
+	background-color:#99ff66;
+}
+td.blauw {
+	background-color:#99ccff;
+}
+div.center {
+	width:960px;
+	margin:auto;
+}
+footer {
+	margin-top:31%;
+	float:bottom;
+	background-color:black;
+	height:60px;
+}
+footer a {
+	padding:10px;
+	color:white;
+	font-weight:bold;
+}

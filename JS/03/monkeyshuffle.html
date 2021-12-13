@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Monkey Shuffle</title>
+    <style>
+html {
+    padding:0px;
+    margin:0px;
+}
+div{
+    border: 1px solid black;
+}
+div#apen{
+    margin:0;
+    padding:0;
+    margin:auto;
+    width:908px;
+    height:908px;
+}
+div#apen img{
+    margin:0;
+    padding:0;
+    width:300px;
+    height:300px;
+}
+h1   {
+    text-align:center;
+}
+button{
+    margin-left:48%;
+    margin-bottom:10px;
+}
+    </style>
+</head>
+<body>
+    <h1>Monkey Shuffle</h1>
+    <button onclick="reset()">Reset</button>
+<div id="apen">
+    <img src="../img/aap1.jpg">
+    <img src="../img/aap2.jpg">
+    <img src="../img/aap3.jpg">
+    <img src="../img/aap4.jpg">
+    <img src="../img/aap5.jpg">
+    <img src="../img/aap6.jpg">
+    <img src="../img/aap7.jpg">
+    <img src="../img/aap8.jpg">
+    <img src="../img/aap9.jpg">
+</div>
+<script>
+    function reset(){
+        var raar=0;
+        var plaatjes = document.getElementsByTagName("img");
+        var raarcijfer = [];
+        while(raarcijfer.length < 9){
+            raar = Math.floor(Math.random()*9)+1;
+            if(raarcijfer.lastIndexOf(raar) == -1) {
+            raarcijfer.push(raar);
+        }
+    }
+    raar=0
+    for(var plaatje in plaatjes){
+        plaatjes[plaatje].src = "../img/aap"+raarcijfer[raar]+".jpg";
+        raar++;
+    }
+ }reset();
+</script>
+    <div style="left:0px;top:10px;position:absolute;">
+        <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html#school-projects"><p>&larr; Terug gaan</p></a>
+    </div>
+</body></html>

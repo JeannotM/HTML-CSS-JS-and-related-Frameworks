@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+    <link rel="icon" type="image/icon" href="img/favicon.ico">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/pictures.js"></script>
+    <script src="js/vue.js" async></script>
+    <script src="js/ai.js" async></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="msgWindow"></div>
+    <div id="dark-bg" @click="toggleTutorial">
+        <div class="on-screen">
+            <h1>Regels</h1>
+            <p>Klik op de kaarten met de linkermuisknop om ze te draaien<br><br>Je krijgt 20 punten als je 4 dezelfde kaarten hebt gevonden<br><br>Er gaat telkens 1 punt af als je een foute combinatie hebt geklikt
+            <img class="gif" src="img/click_card.gif" alt="Video van memory"></p>
+        </div>
+        <div class="on-screen d-none">
+            <h1>Gefeliciteerd!</h1>
+            <p>U heeft de quiz in {{ time }} gehaald met {{ score }} punten!<br><br>Deel uw score nu online!. <p>
+            <img class="share-button" src="img/tweet.jpg" alt="tweet" @click="shareButton('tweet')"><button @click="resetGame" id="bottomBtn">Opnieuw spelen</button>
+        </div>
+    </div>
+    <div id="itemContainer">
+        <div><p>Score: {{ score }}</p><p>Tijd: {{ time }}</p></div>
+        <div>
+            <button @click="resetGame">Reset</button>
+            <button @click="toggleTutorial">Bekijk Regels</button>
+            <button><a href="testscript.html">Bekijk Documentatie</a></button>
+            <button onclick="coole_ai()">Laag IQ modus</button>
+            <button @click="consoleLogAnswers">console.log kaarten</button>
+        </div>
+    </div>
+    <div id="container">
+        <div class="card" v-for="id in randomizedCards" v-bind:id="id" @click="flipCard"></div>
+    </div>
+</body>
+</html>

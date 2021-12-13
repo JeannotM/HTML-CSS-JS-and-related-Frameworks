@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yahtzee Jeannot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="yahtzee.css">
+</head>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="Yahtzee.js"></script>
+<body>
+    <div id="body">
+        <h1>Yahtzee!</h1>
+        <div id="antwoord">
+            <img id="dobbelsteen1">
+            <img id="dobbelsteen2">
+            <img id="dobbelsteen3">
+            <img id="dobbelsteen4">
+            <img id="dobbelsteen5">
+        </div>
+        <button type="button" onclick="roll()" id="gooi">Gooi</button>
+        <div id="knoppen">
+            <div id="links">
+                <button type="button" id="1" onclick="check(this.id)">Enen</button>
+                <input type="text" id="1tekst" disabled>
+                <button type="button" id="2" onclick="check(this.id)">Tweeën</button>
+                <input type="text" id="2tekst" disabled>
+                <button type="button" id="3" onclick="check(this.id)">Drieën</button>
+                <input type="text" id="3tekst" disabled>
+                <button type="button" id="4" onclick="check(this.id)">Vieren</button>
+                <input type="text" id="4tekst" disabled>
+                <button type="button" id="5" onclick="check(this.id)">Vijven</button>
+                <input type="text" id="5tekst" disabled>
+                <button type="button" id="6" onclick="check(this.id)">Zessen</button>
+                <input type="text" id="6tekst" disabled>
+                <button type="bonus" disabled>Bonus</button>
+                <input type="text" id="bonustekst" value='0' disabled>
+            </div>
+            <div id="rechts">
+                <input type="text" id="3dezelfdetekst" disabled>
+                <button type="button" id="3dezelfde" onclick="check(this.id)">3 Dezelfde</button>
+                <input type="text" id="carretekst" disabled>
+                <button type="button" id="carre" onclick="check(this.id)">Carré</button>
+                <input type="text" id="fullhousetekst" disabled>
+                <button type="button" id="fullhouse" onclick="check(this.id)">Full House</button>
+                <input type="text" id="kl.straattekst" disabled>
+                <button type="button" id="kl.straat" onclick="check(this.id)">Kl.Straat</button>
+                <input type="text" id="gr.straattekst" disabled>
+                <button type="button" id="gr.straat" onclick="check(this.id)">Gr.Straat</button>
+                <input type="text" id="yahtzeetekst" disabled>
+                <button type="button" id="yahtzee" onclick="check(this.id)">Yahtzee!</button>
+                <input type="text" id="chancetekst" disabled>
+                <button type="button" id="chance" onclick="check(this.id)">Chance</button>
+            </div>
+            <button type="button" disabled>Score</button>
+            <input type="text" id="score" value='0' disabled>
+        </div>
+    </div>
+    <div style="left:0px;top:10px;position:absolute;">
+        <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html"><p>&larr; Terug gaan</p></a>
+    </div>
+</body>
+</html>

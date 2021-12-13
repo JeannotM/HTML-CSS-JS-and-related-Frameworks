@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Image Slider</title>
+    <style>
+        h1{
+            text-align:center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #slide{
+            border:2px solid black;
+            width:300px;
+            height:300px;
+            margin:auto;
+            transition:0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <div id="slide">
+
+    </div>
+<script>
+    var plaatjes = [1,2,3,4,5,6,7,8,9]
+    var aapteller=0;
+    var slider = document.getElementById("slide");
+    slide.style.backgroundImage='url("../img/aap1.jpg")';
+
+    slide.addEventListener("click", function(){
+        slide.style.backgroundImage="url('../img/aap"+getaap()+".jpg')";
+    });
+    function getaap(){
+        if(aapteller>=plaatjes.length){
+            aapteller=1;
+        }else{
+            aapteller++;
+        }
+        console.log(aapteller);
+        return aapteller;
+    }
+</script>
+<div style="left:0px;top:10px;position:absolute;">
+    <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html#school-projects"><p>&larr; Terug gaan</p></a>
+</div>
+</body></html>

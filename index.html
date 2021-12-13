@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Een simpel gecodeerde HTML pagina</title>
+</head>
+<body>
+    <div class="closeable">
+        <p id="school-projects" class="title">Stuff I made at or for school</p>
+        <p>Most of this was made in the first year I started programming. I've made a lot more than this for school, but I removed the ugly testing websites. So only nice looking- or interesting pages remain</p>
+        <div>
+            <h1><span class="html">html</span> & <span class="css">CSS</span> Focused</h1>
+            <ul>
+                <li><a href="HTML/websiteschets.html">Pipe Installation website assignment <span>(2018)</span></a></li>
+                <li><a href="HTML/burton.html">School website assignment <span>(2018)</span></a></li>
+                <li><a href="HTML/truemusic.html">Music website assignment <span>(2018)</span></a></li>
+                <li><a href="HTML/HTML Challenge 2/index.html">Blogging website Challenge <span>(2018)</span></a></li>
+                <li><a href="otherProjects/quiz/index.html">Quiz about HTML & CSS <span>(2020)</span></a></li>
+            </ul>
+        </div>
+        <div>
+            <h1><span class="js">Javascript</span> Focused</h1>
+            <ul>
+                <li><a href="JS/03/monkeyshuffle.html">Monkey Shuffle <span>(2018)</span></a></li>
+                <li><a href="JS/04/crookapp.html">CrookApp <span>(2018)</span></a></li>
+                <li><a href="JS/04/imageslider.html">Image Slider <span>(2018)</span></a></li>
+                <li><a href="JS/05/monkeychooser.html">Favorite Monkey Chooser <span>(2018)</span></a></li>
+                <li><a href="JS/05/monkeymemory.html">Monkey Memory <span>(2018, broken)</span></a></li>
+                <li><a href="JS/JQuery/Yahtzee.html">Yahtzee using JQuery <span>(2018)</span></a></li>
+                <li><a href="otherProjects/memory/index.html">Memory using Vue <span>(2021)</span></a></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Bootstrap (all from 2018)</h1>
+            <ul>
+                <li><a href="BS/a.html">Opdracht 1</a></li>
+                <li><a href="BS/b.html">Opdracht 2</a></li>
+                <li><a href="BS/c.html">Opdracht 3</a></li>
+                <li><a href="BS/d.html">Opdracht 4</a></li>
+                <li><a href="BS/e.html">Opdracht 5 & 6</a></li>
+                <li><a href="BS/f.html">Opdracht 7</a></li>
+                <li><a href="BS/g.html">Opdracht 8</a></li>
+                <li><a href="BS/h.html">Eigen gedoe</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="closeable">
+        <p id="self-projects" class="title">Stuff I wanted to make for myself</p>
+        <p>Most of the stuff displayed here was made because I wanted to learn how a certain framework works.</p>
+        <div>
+            <h1>Made with Frameworks</h1>
+            <ul>
+                <li><a href="otherProjects/pokemon">Pokemon Card Display With React.js (2021)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // Just a simple script, please don't read this
+    var title = document.getElementsByClassName("title");
+
+    for(let i = 0; i < title.length; i++) {
+        title[i].addEventListener("click", () => {
+            openThisTab(title[i].parentElement);
+        });
+    }
+
+    var hash = window.location.hash;
+    if(hash != "") {
+        document.querySelector(hash).click();
+    }
+
+    function openThisTab(el) {
+        let opened = document.getElementsByClassName("open");
+        if(el.classList.contains("open")) {
+            el.classList.remove("open");
+            return;
+        } else if(opened.length != 0) {
+            for(let i = 0; i < opened.length; i++) {
+                opened[i].classList.remove("open");
+            }
+        }
+        window.location.hash = el.getElementsByClassName("title")[0].id;
+        el.classList.add("open");
+    }
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Crook App</title>
+    <style>
+        h1{
+            text-align:center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        div{
+            width:300px;
+            height:200px;
+            margin:auto;
+            transition:0.1s;
+            margin-top:0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crook-App</h1>
+    <div id="a">
+    <div id="hoofd"></div>
+    <div id="arm"></div>
+    <div id="been"></div>
+    </div>
+<script>
+    var plaatjes = [1,2,3]
+    var hteller=0;
+    var ateller=0;
+    var bteller=0;
+    var hoofd = document.getElementById("hoofd");
+    hoofd.style.backgroundImage='url("crookapp/hoofd1.png")';
+
+    hoofd.addEventListener("click", function(){
+        hoofd.style.backgroundImage="url('crookapp/hoofd"+thoofd()+".png')";
+    });
+    function thoofd(){
+        if(hteller>=4){
+            hteller=1;
+        }else{
+            hteller++;
+        }
+        console.log(hteller);
+        return hteller;
+    }
+    var arm = document.getElementById("arm");
+    arm.style.backgroundImage='url("crookapp/arm1.png")';
+
+    arm.addEventListener("click", function(){
+        arm.style.backgroundImage="url('crookapp/arm"+tarm()+".png')";
+    });
+    function tarm(){
+        if(ateller>=plaatjes.length){
+            ateller=1;
+        }else{
+            ateller++;
+        }
+        console.log(ateller);
+        return ateller;
+    }
+    var been = document.getElementById("been");
+    been.style.backgroundImage='url("crookapp/been1.png")';
+
+    been.addEventListener("click", function(){
+        been.style.backgroundImage="url('crookapp/been"+tbeen()+".png')";
+    });
+    function tbeen(){
+        if(bteller>=plaatjes.length){
+            bteller=1;
+        }else{
+            bteller++;
+        }
+        console.log(bteller);
+        return bteller;
+    }
+</script>
+<div style="left:0px;top:10px;position:absolute;">
+    <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../../index.html#school-projects"><p>&larr; Terug gaan</p></a>
+</div>
+</body></html>

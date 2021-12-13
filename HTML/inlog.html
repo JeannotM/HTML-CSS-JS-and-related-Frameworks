@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Inlog</title>
+  <link rel="stylesheet" type="text/css" href="css/php.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+ </head>
+ <body>
+ <h3>Een echte formulier</h3>
+ <form action="login.php method="post">
+  <div class="center">
+  <ul>
+   <li>
+  <label for="voorn">Voornaam:</label>
+  <input type="text" name="voornaam">
+   </li>
+   <li>
+  <label for="tussen">Tussenvoegsel:</label>
+  <input type="text" name="tussenvoegsel">
+   </li>
+   <li>
+  <label for="achtern">Achternaam:</label>
+  <input type="text" name="achternaam">
+   </li>
+   <li>
+  <label for="geslacht">Geslacht:</label><br>
+  <input type="radio" name="geslacht" value="man"/>&nbsp;Man<br>
+  <input type="radio" name="geslacht" value="vrouw"/>&nbsp;Vrouw<br>
+  <input type="radio" name="geslacht" value="rest"/>&nbsp;N.V.T
+   </li>
+   <li>
+  <label for"kleur-ogen">Kleur Ogen:</label>
+  <select name="kleur-ogen">
+   <option>Groen</option>
+   <option>Blauw</option>
+   <option>Bruin</option>
+  </select>
+   </li>
+   <li>
+  <label for"geboortedatum">Geboortedatum:</label>
+  <input type="date" name="geboortedatum">
+   </li>
+   <li>
+  <label for"text">Omschrijving:</label>
+  <input type="texarea" name="text"><br>
+   </li>
+   <li class="lekkereten">
+  <label for="eten">Lekker eten:</label><br>
+  <input type="checkbox" name="eten" value="sperciebonen"><a>Sperciebonen</a><br>
+  <input type="checkbox" name="eten" value="aardappel"><a>Aardappelen</a><br>
+  <input type="checkbox" name="eten" value="hamburger"><a>Hamburger</a>
+   </li>
+   <li class="submit">
+  <input type="submit" name="submit" value="Inleveren">
+   </li>
+   <li class="knop">
+  <input href="burton.html" type="button" name="terug" value="Terug">
+   </li>
+  </ul>
+ </div>
+ </form>
+  <div style="left:0px;bottom:10px;position:absolute;">
+    <a style="cursor:pointer;font-weight:bold;font-family:'arial', sans-serif" href="../index.html"><p>&larr; Terug gaan</p></a>
+  </div>
+  </body>
+</html>

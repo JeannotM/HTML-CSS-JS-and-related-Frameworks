@@ -1,0 +1,30 @@
+form ul {
+   padding:0;
+}
+form ul li, form ul li.a a  {
+   padding:10px;
+}
+form ul li input, form ul li select {
+   position:absolute;
+   left:150px;
+}
+.lekkereten {
+	position:absolute;
+	top:60px;
+	left:400px;
+	text-decoration:none;
+	border-collapse:collapse;
+    list-style: none;
+}
+.submit {
+	position:absolute;
+    list-style: none;
+	left:250px;
+}
+.knop {
+	position:absolute;
+	list-style: none;
+	left:350px;
+}
+body {
+	font-family:"Roboto Condensed", "arial";
